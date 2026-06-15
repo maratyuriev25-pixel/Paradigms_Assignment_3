@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Paradigms_3/Paradigms_3.vcxproj" />
+  <Project Path="DLL/DLL.vcxproj" Id="d754d08a-cb73-4b07-9f06-46965fa3c639" />
+  <Project Path="Paradigms_3/Paradigms_3.vcxproj" Id="a2527900-0c78-45b0-ba12-686c1b179078" />
 </Solution>
