@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Paradigms_Assignment_3/Paradigms_Assignment_3.vcxproj" />
+  <Project Path="cipher_app/cipher_app.vcxproj" />
 </Solution>
