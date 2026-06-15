@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OneDrive\Рабочий стол\files\cipher.cpp" />
+    <ClCompile Include="..\..\..\..\..\OneDrive\Рабочий стол\files\cipher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\OneDrive\Рабочий стол\files\cipher.h" />
-    <ClInclude Include="..\..\..\..\OneDrive\Рабочий стол\files\cipher_api.h" />
+    <ClInclude Include="..\..\..\..\..\OneDrive\Рабочий стол\files\cipher.h" />
+    <ClInclude Include="..\..\..\..\..\OneDrive\Рабочий стол\files\cipher_api.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -124,7 +124,7 @@
       <PreprocessorDefinitions>_DEBUG;DLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>

@@ -14,7 +14,7 @@ typedef void (*FreeFunc)(char* str);
 int main() {
     std::cout << "===== Encryption Cipher Library =====" << std::endl;
 
-    HMODULE hLib = LoadLibraryA("cipher.dll");
+    HMODULE hLib = LoadLibraryA("DLL.dll");
 
     if (!hLib) {
         std::cerr << "Failed to load cipher.dll" << std::endl;
