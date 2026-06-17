@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring>
 #include <windows.h>
+#include <limits>
 
 typedef void* cipher_t;
 typedef cipher_t* (*CreateCaesarFunc)(int key);
@@ -11,6 +12,21 @@ typedef char* (*EncryptFunc)(cipher_t* cipher, const char* text);
 typedef char* (*DecryptFunc)(cipher_t* cipher, const char* text);
 typedef void (*DestroyFunc)(cipher_t* cipher);
 typedef void (*FreeFunc)(char* str);
+
+
+int readInteger(const std::string& prompt) {
+    int value;
+    while (true) {
+        std::cout << prompt;
+        if (std::cin >> value) {
+            std::cin.ignore(10000, '\n');
+            return value;
+        }
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+        std::cout << "Invalid input! Please enter a valid number." << std::endl;
+    }
+}
 
 int main() {
     std::cout << "===== Encryption Cipher Library =====" << std::endl;
@@ -39,19 +55,14 @@ int main() {
         std::cout << "2. Vigenere Cipher" << std::endl;
         std::cout << "3. Playfair Cipher" << std::endl;
         std::cout << "4. Exit" << std::endl;
-        std::cout << "Choose an option (1-4): ";
-        std::cin >> choice;
-        std::cin.ignore();
+        choice = readInteger("Choose an option (1-4): ");
 
 
 
         if (choice == 1) {
             std::cout << "\n----- Caesar Cipher -----" << std::endl;
 
-            int key;
-            std::cout << "Enter shift key (1-25): ";
-            std::cin >> key;
-            std::cin.ignore();
+            int key = readInteger("Enter shift key (1-25): ");
 
             cipher_t* cipher = create_caesar(key);
             if (!cipher) {
@@ -64,9 +75,7 @@ int main() {
                 std::cout << "\n1. Encrypt" << std::endl;
                 std::cout << "2. Decrypt" << std::endl;
                 std::cout << "3. Back to main menu" << std::endl;
-                std::cout << "Choose an option (1-3): ";
-                std::cin >> subChoice;
-                std::cin.ignore();
+                subChoice = readInteger("Choose an option (1-3): ");
 
                 if (subChoice == 3) break;
 
@@ -106,9 +115,7 @@ int main() {
                 std::cout << "\n1. Encrypt" << std::endl;
                 std::cout << "2. Decrypt" << std::endl;
                 std::cout << "3. Back to main menu" << std::endl;
-                std::cout << "Choose an option (1-3): ";
-                std::cin >> subChoice;
-                std::cin.ignore();
+                subChoice = readInteger("Choose an option (1-3): ");
 
                 if (subChoice == 3) break;
 
@@ -148,9 +155,7 @@ int main() {
                 std::cout << "\n1. Encrypt" << std::endl;
                 std::cout << "2. Decrypt" << std::endl;
                 std::cout << "3. Back to main menu" << std::endl;
-                std::cout << "Choose an option (1-3): ";
-                std::cin >> subChoice;
-                std::cin.ignore();
+                subChoice = readInteger("Choose an option (1-3): ");
 
                 if (subChoice == 3) break;
 
